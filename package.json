@@ -11,5 +11,14 @@
     "url": "https://github.com/MantovaniWebDeveloper"
   },
   "author": "Dario Mantovani",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-uglify": "^3.0.2"
+  }
 }
