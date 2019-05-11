@@ -25,10 +25,24 @@ gulp.task('styles', function () {
 	);
 });
 
+//JS///
+gulp.task('js_scripts', function () {
+  return gulp.src('js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('../public/js'))
+    .pipe(notify({
+		message: 'JS prodotto!',
+		onLast: true,
+		sound: 'Pop'
+		})
+  );
+});
+
 //TASK WATCH SCRITTO PER LA VERSIONE 4 DI GULP.JS (NEL 3 SI SCRIVE COSI['styles'] e senza gulp.series)
 gulp.task('watch', function () {
   gulp.watch('scss/**/*.scss', gulp.series('styles'));
+  gulp.watch('js/**/*.js', gulp.series('js_scripts'));
 });
 
 //TASK PER LANCIARE AUTOMATICAMENTE CON SOLO il comando GULP tutti i task in versione GULP 4 con gulp.parallel
-gulp.task('default', gulp.parallel('styles','watch'));
+gulp.task('default', gulp.parallel('styles','js_scripts','watch'));
