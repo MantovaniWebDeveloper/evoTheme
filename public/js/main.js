@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery(".wrapElementoFiltro").on("click",function(a){var o=jQuery(a.target).attr("id");console.log(o),jQuery.ajax({url:my_vars.ajaxurl,type:"POST",data:{action:"trovaPilota",_nonce:my_vars.nonce,idCategoria:o},success:function(a){console.log("da ajax",a)}})})});

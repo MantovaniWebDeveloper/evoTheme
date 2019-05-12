@@ -12,7 +12,10 @@
   },
   "author": "Dario Mantovani",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "popper.js": "^1.15.0"
+  },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "gulp": "^4.0.2",
